@@ -1,0 +1,59 @@
+{
+  "name": "git-commit-assistant",
+  "displayName": "Git Commit Assistant",
+  "description": "Smart Git commits with emoji, Zen quotes, and file-based messages.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-id",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Source Control"
+  ],
+  "keywords": [
+    "git",
+    "emoji",
+    "commit",
+    "message",
+    "automation",
+    "zen"
+  ],
+  "main": "./out/extension.js",
+  "icon": "images/icon.png",
+  "activationEvents": [
+    "onCommand:git-commit-assistant.smartMessage",
+    "onCommand:git-commit-assistant.emojiPalette",
+    "onCommand:git-commit-assistant.zenQuote",
+    "onCommand:git-commit-assistant.comboCommit"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-commit-assistant.smartMessage",
+        "title": "Git Assistant: Generate Smart Commit Message"
+      },
+      {
+        "command": "git-commit-assistant.emojiPalette",
+        "title": "Git Assistant: Pick Emoji Commit Prefix"
+      },
+      {
+        "command": "git-commit-assistant.zenQuote",
+        "title": "Git Assistant: Show Zen Quote"
+      },
+      {
+        "command": "git-commit-assistant.comboCommit",
+        "title": "Git Assistant: Smart Commit (Emoji + Message + Zen)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "typescript": "^5.4.0",
+    "vsce": "^2.15.0"
+  }
+}
