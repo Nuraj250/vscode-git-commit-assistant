@@ -10,7 +10,7 @@ export function generateSmartMessage(): string | undefined {
         return;
     }
 
-    const changed = repo.state.workingTreeChanges.map((f:any) =>
+    const changed = repo.state.workingTreeChanges.map((f: any) =>
         f.uri.fsPath.split(/[\\/]/).pop()
     );
 
